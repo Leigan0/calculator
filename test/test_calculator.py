@@ -27,5 +27,19 @@ class TddInPythonAttempt(unittest.TestCase):
         result = self.calc.subtract(6,2)
         self.assertEqual(4, result)
 
-    def test_calculator_returns_error_message_if_both_args_not_numbers(self):
+    def test_calculator_returns_error_message_if_both_args_not_numbers_subtract(self):
         self.assertRaises(ValueError, self.calc.subtract, 'two', 'three')
+
+    def test_calculator_divide_method_returns_correct_results(self):
+        result = self.calc.divide(6,2)
+        self.assertEqual(3, result)
+
+    def test_calculator_returns_error_message_if_both_args_not_numbers_divide(self):
+        self.assertRaises(ValueError, self.calc.divide, 'two', 'three')
+
+    def test_calculator_divide_method_returns_correct_results(self):
+        result = self.calc.multiply(6,2)
+        self.assertEqual(12, result)
+
+    def test_calculator_returns_error_message_if_both_args_not_numbers_multiply(self):
+        self.assertRaises(ValueError, self.calc.multiply, 'two', 'three')
