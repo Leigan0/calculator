@@ -16,3 +16,16 @@ class TddInPythonAttempt(unittest.TestCase):
 
     def test_calculator_returns_error_message_if_both_args_not_numbers(self):
         self.assertRaises(ValueError, self.calc.add, 'two', 'three')
+
+    def test_calculator_returns_error_message_if_x_arg_not_number(self):
+        self.assertRaises(ValueError, self.calc.add, 'two', 3)
+
+    def test_calculator_returns_error_message_if_y_arg_not_number(self):
+        self.assertRaises(ValueError, self.calc.add, 2, 'three')
+
+    def test_calculator_subtract_method_returns_correct_results(self):
+        result = self.calc.subtract(6,2)
+        self.assertEqual(4, result)
+
+    def test_calculator_returns_error_message_if_both_args_not_numbers(self):
+        self.assertRaises(ValueError, self.calc.subtract, 'two', 'three')
