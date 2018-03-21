@@ -11,3 +11,11 @@ class Calculator(object):
     def subtract(self, x, y):
         if self.validate_input(x, y): return x - y
         else: raise ValueError
+
+    def divide(self, x, y):
+        if self.validate_input(x, y): return x // y
+        else: raise ValueError
+
+    def multiply(self, x, y):
+        if self.validate_input(x, y): return x * y
+        else: raise ValueError
